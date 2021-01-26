@@ -1,4 +1,15 @@
-let myLibrary = [];
+const myLibrary = [{
+	title: 'Harry Potter',
+	author: 'J. K. Rowling',
+	pages: 300,
+	read: true,
+},
+{
+	title: 'Lord of the Rings',
+	author: 'Tolkien',
+	pages: 1232,
+	read: false,
+}];
 
 function Book(title, author, pages, read) {
 	this.title = title;
@@ -11,7 +22,14 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-	
-	const newBook = new Book
-
+	let title;
+	let author;
+	let pages;
+	let read;
+	const newBook = new Book(title, author, pages, read);
+	myLibrary.push(newBook);
 }
+
+function showBook() {};
+
+
