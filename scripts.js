@@ -1,3 +1,5 @@
+
+
 const myLibrary = [{
 	title: 'Harry Potter',
 	author: 'J. K. Rowling',
@@ -30,6 +32,28 @@ function addBookToLibrary() {
 	myLibrary.push(newBook);
 }
 
-function showBook() {};
+function showBook() {
+	for (let item of myLibrary) {
+		const bookBackground = document.createElement('div');
+		const bookInfo = document.createElement('div');
+		const bookTitle = document.createElement('h2');
+			bookTitle.textContent = item.title;
+		const bookAuthor = document.createElement('p');
+			bookAuthor.textContent = item.author;
+		const bookPages = document.createElement('p');
+			bookPages.textContent = item.pages;
+		const checkRead = document.createElement('input');
 
+		bookBackground.classList.add('book-background');
+		bookInfo.classList.add('book-info');
+		bookInfo.appendChild(bookTitle);
+		bookInfo.appendChild(bookAuthor);
+		bookInfo.appendChild(bookPages);
+		bookInfo.appendChild(checkRead);
+		bookBackground.appendChild(bookInfo);
+		document.body.appendChild(bookBackground);
 
+	}
+}
+
+showBook();

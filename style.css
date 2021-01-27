@@ -1,4 +1,3 @@
-CSS
 *,
 *::before,
 *::after {
@@ -22,7 +21,6 @@ body {
 	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
 	gap: 5rem;;
 }
 
@@ -65,3 +63,4 @@ select {
 	padding: 5%;
 	text-align: center;
 }
+
