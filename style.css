@@ -44,6 +44,7 @@ header {
 	display: flex;
 	gap: 5rem;
 	font-family: 'Potta One', cursive;
+	backdrop-filter: blur(0.5rem);
 }
 
 header button {
@@ -54,14 +55,16 @@ header button {
 	color: initial;
 	font-size: 4rem;
 	line-height: 3rem;
-	transition: transform 0.5s ease-out;
+	transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
 	border: 0.2rem outset black;	
 	box-shadow: 0 0 2rem black;
+	cursor: pointer;
 }
 
 header button:hover {
-	transform: rotate(360deg);
-	background-color: green;
+	transform: rotate(360deg) scale(1.1);
+	background-color: rgb(0, 162, 211);
+	box-shadow: 0 0 3rem white;
 }
 
 header button:active {
@@ -113,9 +116,46 @@ form {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	padding: 5rem;
 	color: rgb(246, 142, 250);
-	border-radius: 10%;
+	border-radius: 20%;
+	backdrop-filter: blur(0.5rem);
 }
 
+.form-inputs {
+	padding: 1rem 0;
+	width: 100%;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid  rgb(246, 142, 250);
+	color: white;
+	font-family: inherit;
+	font-size: 1.5rem;
+}
+
+.form-buttons {
+	height: 4rem;
+	width: 4rem;
+	margin: 0 2rem;
+	background-color: red;
+	outline: none;
+	font-size: 4rem;
+	line-height: 3rem;
+	transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+	box-shadow: 0 0 2rem black;
+	cursor: pointer;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}
+
+::placeholder {
+	color: rgba(246, 142, 250, 0.5);
+}
