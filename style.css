@@ -8,20 +8,20 @@
 
 html {
 	font-size: 62.5%;
-	
+	font-family: 'Avenir';
 }
 
 body {
   width: 100%;
 	height: 100%;
-	padding: 5rem 0;
   line-height: 1.2;
 	font-size: 2rem;
 	background: url(matthew-t-rader-mwIHOYQYa34-unsplash.jpg);
 	background-size: cover;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 5rem;;
+	gap: 4rem;
+	margin-top: 10vh;
 }
 
 img,
@@ -30,14 +30,49 @@ picture {
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  color: inherit; 
-  font: inherit; 
-	letter-spacing: inherit;
+header {
+	position:fixed;
+	top: 0;
+	height: 10vh;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.5);
+	color: rgb(195, 79, 199);
+	text-shadow: 0 0 2rem black;
+	letter-spacing: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	gap: 5rem;
+	font-family: 'Potta One', cursive;
+}
+
+header button {
+	border-radius: 50%;
+	height: 4rem;
+	width: 4rem;
+	outline: none;
+	color: initial;
+	font-size: 4rem;
+	line-height: 3rem;
+	transition: transform 0.5s ease-out;
+	border: 0.2rem outset black;	
+	box-shadow: 0 0 2rem black;
+}
+
+header button:hover {
+	transform: rotate(360deg);
+	background-color: green;
+}
+
+header button:active {
+	border: 0.2rem solid rgba(0, 0, 0, 0.521);
+}
+
+main {
+	padding: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
 }
 
 .book-background {
@@ -54,13 +89,33 @@ select {
 }
 
 .book-info {
-	height: 70%;
-	width: 70%;
+	height: 82%;
+	width: 82%;
 	left: 3%;
 	border: 2px solid red;
 	position:absolute;
 	color: white;
 	padding: 5%;
 	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+form {
+	position: fixed;
+	display: flex;
+	flex-direction:column;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5rem;
+	color: rgb(246, 142, 250);
+	border-radius: 10%;
 }
 

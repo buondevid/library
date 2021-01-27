@@ -1,4 +1,4 @@
-
+const library = document.getElementById('library');
 
 const myLibrary = [{
 	title: 'Harry Potter',
@@ -33,7 +33,7 @@ function addBookToLibrary() {
 }
 
 function showBook() {
-	for (let item of myLibrary) {
+	for (const item of myLibrary) {
 		const bookBackground = document.createElement('div');
 		const bookInfo = document.createElement('div');
 		const bookTitle = document.createElement('h2');
@@ -51,7 +51,7 @@ function showBook() {
 		bookInfo.appendChild(bookPages);
 		bookInfo.appendChild(checkRead);
 		bookBackground.appendChild(bookInfo);
-		document.body.appendChild(bookBackground);
+		library.appendChild(bookBackground);
 
 	}
 }

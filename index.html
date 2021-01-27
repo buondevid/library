@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
 <meta name="buondevid's Library" content="A description of the page">
 </head>
 
 <body>
-
+	<header>
+		<h1>A Library App</h1>
+		<button>+</button>
+	</header>
+	<main class='hidden' id='library'>
 		<div class='book-background'>
 			<div class='book-info'>
 				<H2>Harry Potter</H2>
@@ -23,12 +29,16 @@
 				ciao
 			</div>
 		</div>
+	</main>
+	<form>
+		<h2>Add a new book</h2>
+		<input id='form-title' placeholder='Title'>
+		<input id='form-author' placeholder='Author'>
+		<input id='form-pages' placeholder='Pages'>
+		<label for='form-check'>Read ? <input type="checkbox" id='form-check'></label>
+		
+	</form>
 
-		<div class='book-background'>
-			<div class='book-info'>
-				ciao
-			</div>
-		</div>
 
 		
 
