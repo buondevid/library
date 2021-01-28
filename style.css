@@ -144,7 +144,6 @@ form {
 	font-size: 4rem;
 	line-height: 3rem;
 	transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
-	box-shadow: 0 0 2rem black;
 	cursor: pointer;
 }
 
