@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <head>
-<title>The Library</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-<meta name="buondevid's Library" content="A description of the page">
+	<title>The Library</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+	<meta name="buondevid's Library" content="A description of the page">
 </head>
 
 <body>
@@ -14,37 +15,26 @@
 		<h1>A Library App</h1>
 		<button>+</button>
 	</header>
-	<main class='hidden' id='library'>
-		<div class='book-background'>
-			<div class='book-info'>
-				<H2>Harry Potter</H2>
-				<p>J.K. Rowling</p>
-				<p>500 pages<p>
-				<input type="checkbox">
-			</div>
-		</div>
 
-		<div class='book-background'>
-			<div class='book-info'>
-				ciao
-			</div>
-		</div>
+	<main id='library'>
 	</main>
-	<form>
-		<h2>Add a new book</h2>
-		<input id='form-title' placeholder='Title' class='form-inputs'>
-		<input id='form-author' placeholder='Author' class='form-inputs'>
-		<input id='form-pages' placeholder='Pages' class='form-inputs'>
-		<label for='form-check'>Read ? <input type="checkbox" id='form-check'></label>
-		<div>
-			<button type="button" class='form-buttons green'>✓</button>
-			<button type="button" class='form-buttons red'>✗</button>
-		</div>
-		
-	</form>
+
+	<div class='form-background hidden'>
+		<form>
+			<h2>Add a new book</h2>
+			<input required id='form-title' type='text' placeholder='Title' class='form-inputs'>
+			<input required id='form-author' type='text' placeholder='Author' class='form-inputs'>
+			<input required id='form-pages' type="number" placeholder='Pages' class='form-inputs'>
+			<label for='form-checkbox'>Read ? <input type="checkbox" id='form-checkbox'></label>
+			<div>
+				<button type='submit' class='form-buttons green'>✓</button>
+				<button type="button" class='form-buttons red'>✗</button>
+			</div>
+
+		</form>
+	</div>
 
 
-		
 
 	<script src="scripts.js"></script>
 </body>

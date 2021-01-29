@@ -34,17 +34,20 @@ header {
 	position:fixed;
 	top: 0;
 	height: 10vh;
-	width: 100vw;
-	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
 	color: rgb(195, 79, 199);
 	text-shadow: 0 0 2rem black;
 	letter-spacing: 0.5rem;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	text-align: center;
 	gap: 5rem;
 	font-family: 'Potta One', cursive;
 	backdrop-filter: blur(0.5rem);
+	line-height: 10vh;
+}
+
+header h1 {
+	display: inline-block;
 }
 
 header button {
@@ -64,11 +67,12 @@ header button {
 header button:hover {
 	transform: rotate(360deg) scale(1.1);
 	background-color: rgb(0, 162, 211);
-	box-shadow: 0 0 3rem white;
+	box-shadow: 0 0 3rem  rgb(246, 142, 250);
 }
 
 header button:active {
 	border: 0.2rem solid rgba(0, 0, 0, 0.521);
+	box-shadow: 0 0 3rem transparent;
 }
 
 main {
@@ -88,44 +92,66 @@ main {
 }
 
 .book-background:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 .book-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
 	height: 82%;
 	width: 82%;
 	left: 3%;
-	border: 2px solid red;
 	position:absolute;
 	color: white;
 	padding: 5%;
-	text-align: center;
+}
+
+.delete-book {
+	background-color: transparent;
+	font-weight: bold;
+	color: red;
+	position: absolute;
+	top: 4%;
+	right: 5%;
+	font-size: 2rem;
+	outline: none;
+	border: none;
 }
 
 .hidden {
 	display: none;
 }
 
-form {
-	position: fixed;
-	display: flex;
-	flex-direction:column;
-	gap: 3rem;
-	justify-content: center;
-	align-items: center;
+.form-background {
+	position: absolute;
+	height: 40rem;
+	width:40rem;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background: rgba(0, 0, 0, 0.6);
-	padding: 5rem;
+	background: url(book-5-256x256.png);
+	background-size: cover;
+}
+
+form {
+	position: block;
+	display: flex;
+	flex-direction:column;
+	gap: 1.5rem;
+	justify-content: center;
+	align-items: center;
+	width:82%;
+	height:82%;
 	color: rgb(246, 142, 250);
-	border-radius: 20%;
-	backdrop-filter: blur(0.5rem);
 }
 
 .form-inputs {
 	padding: 1rem 0;
-	width: 100%;
+	width: 80%;
 	outline: none;
 	background-color: transparent;
 	border: none;
@@ -147,12 +173,20 @@ form {
 	cursor: pointer;
 }
 
+.form-buttons:hover {
+	color: rgb(246, 142, 250);
+}
+
 .green {
 	background-color: green;
 }
 
 .red {
 	background-color: red;
+}
+
+.read {
+	filter: contrast(50%);
 }
 
 ::placeholder {
