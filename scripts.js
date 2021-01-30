@@ -138,6 +138,5 @@ abort.addEventListener('click', () => {
 	300);
 });
 
-// populate library at start
-
+// show default myLibrary at start
 showBook();
