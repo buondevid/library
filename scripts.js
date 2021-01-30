@@ -23,7 +23,7 @@ function Book(title, author, pages, read) {
 	this.author = author;
 	this.pages = pages;
 	this.read = read;
-	this.info = function () {
+	this.info = function b() {
 		return `${title} by ${author}, ${pages} pages, ${read === true ? 'read already' : 'not read yet'}`;
 	};
 }
@@ -32,27 +32,35 @@ function showBook() {
 	for (const item of myLibrary) {
 		const bookBackground = document.createElement('div');
 		bookBackground.classList.add('book-background');
+
 		const bookInfo = document.createElement('div');
 		bookInfo.classList.add('book-info');
+
 		const deleteBook = document.createElement('button');
 		deleteBook.type = 'button';
 		deleteBook.className = 'delete-book';
 		deleteBook.textContent = 'X';
+		
 		const bookTitle = document.createElement('h2');
 		bookTitle.textContent = item.title;
+
 		const bookAuthor = document.createElement('p');
 		bookAuthor.textContent = item.author;
+
 		const bookPages = document.createElement('p');
 		bookPages.textContent = `${item.pages} pages`;
+
 		const labelCheck = document.createElement('label');
 		labelCheck.textContent = 'Read? ';
 		labelCheck.style.fontSize = '1rem';
+
 		const checkRead = document.createElement('input');
 		checkRead.type = 'checkbox';
 		checkRead.checked = item.read === true;
 		checkRead.classList.add('checkboxRead');
-		checkRead.checked === true && bookBackground.classList.add('read');
+		checkRead.checked && bookBackground.classList.add('read');
 		checkRead.addEventListener('change', () => bookBackground.classList.toggle('read'));
+		
 		bookInfo.appendChild(deleteBook);
 		bookInfo.appendChild(bookTitle);
 		bookInfo.appendChild(bookAuthor);
@@ -77,7 +85,7 @@ function addBookToLibrary() {
 }
 
 function removeBook(bookTitle) {
-	return function () {
+	return function a() {
 		myLibrary = myLibrary.filter((book) => book.title !== bookTitle);
 		library.innerHTML = '';
 		showBook();
@@ -87,7 +95,7 @@ function removeBook(bookTitle) {
 // header button opens the book form and resets it, if re-clicked
 newBookButton.addEventListener('click', () => {
 	library.classList.add('hidden');
-	formBackground.classList.remove('hidden');
+	formBackground.classList.add('full-scale');
 	form.reset();
 });
 
@@ -99,8 +107,8 @@ form.addEventListener('submit', (e) => {
 
 abort.addEventListener('click', () => {
 	form.reset();
-	formBackground.classList.add('hidden');
-	library.classList.remove('hidden');
+	formBackground.classList.remove('full-scale');
+	setTimeout(() => library.classList.remove('hidden'), 300);
 });
 
 showBook();
