@@ -56,7 +56,7 @@ header {
 	z-index: 1;
 	position:fixed;
 	top: 0;
-	height: 10rem;
+	height: 10vh;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.7);
 	color: rgb(102, 4, 105);
@@ -71,7 +71,7 @@ header {
 	text-align: center;
 	font-family: 'Potta One', cursive;
 	backdrop-filter: blur(0.5rem);
-	line-height: 9rem;
+	line-height: 9vh;
 }
 
 header h1 {
@@ -109,11 +109,11 @@ header button:active {
 
 main {
 	padding: 4rem;
+	min-height: 70vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 4rem;
-	min-height: 100%;
 }
 
 .book-background {
@@ -223,11 +223,11 @@ form {
 }
 
 .green {
-	background-color: green;
+	background: linear-gradient(to top left, rgb(14, 107, 14),rgb(28, 196, 28));
 }
 
 .red {
-	background-color: red;
+	background-color: linear-gradient(to top left, rgb(151, 3, 3),rgb(212, 3, 3));;
 }
 
 .signature {
@@ -277,6 +277,10 @@ form {
 @media only screen and (max-width: 500px) {
 	html {
 		font-size: 50%;
+	}
+
+	header button {
+		padding-bottom: 0.5rem;
 	}
 
 	.book-background {
