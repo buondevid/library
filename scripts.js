@@ -70,11 +70,11 @@ function showBook() {
 		checkRead.checked = item.read === true;
 		checkRead.classList.add('checkboxRead');
 		checkRead.checked && bookBackground.classList.add('read');
-		// this event listener dynamically change the object myLibrary when changing Read status on homepage
+		// this event listener dynamically edit the object myLibrary when changing Read stat on homepage
 		checkRead.addEventListener('change', () => {
 			bookBackground.classList.toggle('read');
 			for (const obj of myLibrary) {
-				if (obj.title === bookTitle.textContent)  {
+				if (obj.title === bookTitle.textContent) {
 					obj.read = checkRead.checked;
 					populateStorage();
 				}
