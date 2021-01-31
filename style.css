@@ -272,6 +272,33 @@ form {
 	transform: scale(1) translate(-50%, -50%);
 }
 
+.overlay {
+	transition: background-color 1s ease-in-out;
+}
+
+.overlay-full {
+	position: fixed; /* Sit on top of the page content */
+  display: block;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: back-fade 1s ease-out;
+  z-index: 100;
+}
+
+@keyframes back-fade {
+	0%,
+	100% {
+		background-color: transparent;
+	}
+	30% {
+		background-color: rgba(0,255,0,0.3);
+	}
+}
+
 /* media queries */
 
 @media only screen and (max-width: 500px) {

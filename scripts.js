@@ -123,6 +123,8 @@ newBookButton.addEventListener('click', () => {
 });
 
 form.addEventListener('submit', (e) => {
+	document.querySelector('.overlay').classList.add('overlay-full');
+	setTimeout(() => (document.querySelector('.overlay').classList.remove('overlay-full')), 1000);
 	addBookToLibrary();
 	e.preventDefault();
 	form.reset();

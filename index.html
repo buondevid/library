@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
 	<title>The Library</title>
 	<meta charset="utf-8">
@@ -10,7 +10,10 @@
 	<meta name="buondevid's Library" content="A safe place for all your books!">
 </head>
 
+
+
 <body>
+	<div class='overlay'></div>
 	<header>
 		<h1>The Library</h1>
 		<button>+</button>
@@ -20,11 +23,11 @@
 	</main>
 
 	<div class='form-background fade'>
-		<form autocomplete="off" >
+		<form autocomplete="off">
 			<h2>Add a new book</h2>
 			<input required id='form-title' type='text' placeholder='Title' class='form-inputs'>
 			<input required id='form-author' type='text' placeholder='Author' class='form-inputs'>
-			<input required id='form-pages' type="number" placeholder='Pages' class='form-inputs'>
+			<input min="1" required id='form-pages' type="number" placeholder='Pages' class='form-inputs'>
 			<label for='form-checkbox'>Read ? <input type="checkbox" id='form-checkbox'></label>
 			<div>
 				<button type='submit' class='form-buttons green'>✓</button>
@@ -38,3 +41,4 @@
 
 	<script src="scripts.js"></script>
 </body>
+</html>
