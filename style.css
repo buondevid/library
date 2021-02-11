@@ -44,6 +44,12 @@ body {
 	flex-wrap: wrap;
 	margin-top: 10rem;
 	font-family: fantasy;
+	opacity: 1;
+	transition: opacity 0.7s linear;
+}
+
+.fadeBody {
+	opacity: 0;
 }
 
 h2 {

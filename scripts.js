@@ -114,6 +114,11 @@ function removeBook(bookTitle) {
 }
 
 // event listeners
+document.addEventListener('DOMContentLoaded', () => {
+	window.setTimeout(() => {
+		document.body.classList.remove('fadeBody');
+	}, 230);
+});
 
 newBookButton.addEventListener('click', () => {
 	library.classList.add('hidden');
