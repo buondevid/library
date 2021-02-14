@@ -28,14 +28,17 @@ function setLibrary() {
 
 if (localStorage.length !== 0) setLibrary();
 
-function Book(title, author, pages, read) {
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.read = read;
-	this.info = function b() {
-		return `${title} by ${author}, ${pages} pages, ${read === true ? 'read already' : 'not read yet'}`;
-	};
+class Book {
+	constructor(title, author, pages, read) {
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.read = read;
+	}
+
+	info() {
+		return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read === true ? 'read already' : 'not read yet'}`;
+	}
 }
 
 // function to populate (creating elements) the library with myLibrary objects
@@ -93,7 +96,7 @@ function showBook() {
 	populateStorage();
 }
 
-// add book to Object myLibrary
+// add book to array myLibrary
 function addBookToLibrary() {
 	const title = document.getElementById('form-title').value;
 	const author = document.getElementById('form-author').value;
